@@ -16,7 +16,7 @@ def check_int(x):
 
 
 def parse_model_str(model_str):
-    pairs = model_str.split("::")
+    pairs = model_str.split("-")
     model = pairs[0]
     pairs = [s.split("=") for s in pairs[1:]]
     pairs = [(p[0], check_int(p[1])) for p in pairs]

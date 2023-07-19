@@ -22,7 +22,7 @@ def get_model_strs(family):
         for grid_point in it.product(*param_vecs):
             pairs = zip(param_names, grid_point)
             pairs = ["{}={}".format(p[0], p[1]) for p in pairs]
-            result.append(member_names[i] + "::" + "::".join(pairs))
+            result.append(member_names[i] + "-" + "-".join(pairs))
     return result
 
 
